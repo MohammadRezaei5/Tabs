@@ -1,0 +1,146 @@
+/* font */
+@font-face {
+  font-family: vazir;
+  src: url(Fonts/Vazirmatn-FD-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: vazir;
+  src: url(Fonts/Vazirmatn-FD-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: vazir;
+  src: url(Fonts/Vazirmatn-FD-Thin.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: vazir;
+  src: url(Fonts/Vazirmatn-FD-Regular.ttf);
+  font-weight: 400;
+}
+/* css-rest */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "vazir", sans-serif;
+}
+body {
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/* wrapper */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 613px;
+}
+/* tabs-section */
+.tabs {
+  /* width: 100%; */
+  height: 54px;
+  border-radius: 8px;
+  background-color: #fff;
+  /* padding: 0 33px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+ul.tabs li {
+  list-style: none;
+  height: 100%;
+}
+ul.tabs li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 18px;
+}
+ul.tabs a::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  border-top: 3px solid;
+}
+ul.tabs li a:hover::after,
+ul.tabs li a.active::after {
+  display: block;
+  border-color: #fea901;
+}
+/* ----------- بعدا پیاده کن وقتی دکمه هاور شد هر کدام یک رنگ و بعد کلیک همون رنگ باشد-----------*/
+/* ul.tabs li a.green-border:hover::after,
+ul.tabs li a.active::after {
+  display: block;
+  border-color: #5c9d33;
+}
+ul.tabs li a.light-green-border:hover::after,
+ul.tabs li a.active::after {
+  display: block;
+  border-color: #37b38e;
+}
+ul.tabs li a.blue-border:hover::after,
+ul.tabs li a.active::after {
+  display: block;
+  border-color: #3795b3;
+}
+ul.tabs li a.purple-border:hover::after,
+ul.tabs li a.active::after {
+  display: block;
+  border-color: #6637b3;
+} */
+/* ----------- بعدا پیاده کن وقتی دکمه هاور شد هر کدام یک رنگ و بعد کلیک همون رنگ باشد-----------*/
+
+/* content */
+#content {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  min-height: 130px;
+}
+#content p {
+  color: gray;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 2.15;
+}
+#two,
+#three,
+#four,
+#five {
+  display: none;
+}
+/* media-query */
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    width: 350px;
+  }
+  .tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+  ul.tabs li a {
+    white-space: nowrap;
+  }
+  #content {
+    min-height: 174px;
+  }
+}
